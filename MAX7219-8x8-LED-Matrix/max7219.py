@@ -54,7 +54,7 @@ def image_out(img, mode):  # mode = 0 to invert the image
     shout('1000', img[7], mode)
 
 
-# initialize/configure the display
+# initialize/configure the display (clears the display)
 # intensity is display brightness, 0 is lowest
 # scanlimit is the highest data register scanned
 # shutdown_mode = True to enter the IC's shutdown mode
