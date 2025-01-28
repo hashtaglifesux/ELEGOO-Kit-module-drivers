@@ -1,0 +1,3 @@
+Haven't implemented support for the pushbutton yet
+You can remove all the pygame stuff and the 'number' variable; theyr'e just for testing
+replace 'number += 1' and 'number -= 1' with whatever useful function you want
