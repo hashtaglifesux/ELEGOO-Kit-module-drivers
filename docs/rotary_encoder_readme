@@ -1,3 +1,4 @@
+For the KY-040 rotary encoder
 Haven't made the pushbutton useful yet
 Use the variables clk, dt, sw to specifiy which GPIO ports will be assigned to the pinout. 
 You can remove all the pygame stuff and the 'number' variable; theyr'e just for testing
