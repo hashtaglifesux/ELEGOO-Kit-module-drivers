@@ -7,11 +7,11 @@ echo = 27
 
 mach = 343 # speed of sound in m/s
 
-
 gpio.setmode(gpio.BCM)
 gpio.setup(trig, gpio.OUT)
 gpio.setup(echo, gpio.IN)
 
+# returns the distance in meters
 def measure():
     gpio.output(trig, True)
     start = time.time()
