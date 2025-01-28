@@ -1,13 +1,15 @@
 # Still need to implement pushbutton detection
 import RPi.GPIO as gpio
-import pygame
+import pygame # only for testing
 
+# only for testing
 pygame.init()
 screen = pygame.display.set_mode((130, 80))
 pygame.display.set_caption('number')
 bigfont = pygame.font.Font(None, 70)
 clock = pygame.time.Clock()
 
+# GPIO pins to encoder pins
 clk = 21
 dt = 20
 sw = 16
@@ -19,13 +21,9 @@ gpio.setup(dt, gpio.IN)
 gpio.setup(clk, gpio.IN)
 
 
-number = 0
-color = (255, 255, 255)
+number = 0 # only used for testing
+color = (255, 255, 255) # only for testing
 while True:
-    if gpio.input(sw):
-        color = (255, 64, 16)
-    else:
-        color = (255, 255, 255)
     while not gpio.input(dt):
         flag = False
         while not gpio.input(clk):
@@ -33,7 +31,8 @@ while True:
                 flag = True
                 break
         if flag:
-            number += 1
+            number += 1 # only for testing
+            # dosomethinguseful()
             break
     while not gpio.input(clk):
         flag = False
@@ -42,8 +41,11 @@ while True:
                 flag = True
                 break
         if flag:
-            number -= 1
+            number -= 1 # only for testing
+            # dosomethingelseuseful()
             break
+    
+    # only for testing
     screen.fill((16, 16, 16))
     numtext = bigfont.render(str(number), False, (255, 255, 255))
     screen.blit(numtext, (10, 10))
