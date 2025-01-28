@@ -9,7 +9,7 @@ pygame.display.set_caption('number')
 bigfont = pygame.font.Font(None, 70)
 clock = pygame.time.Clock()
 
-# GPIO pins to encoder pins
+# Device pinout - GPIO assignment 
 clk = 21
 dt = 20
 sw = 16
