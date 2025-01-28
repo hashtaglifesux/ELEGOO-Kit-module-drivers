@@ -22,7 +22,6 @@ gpio.setup(clk, gpio.IN)
 
 
 number = 0 # only used for testing
-color = (255, 255, 255) # only for testing
 while True:
     while not gpio.input(dt):
         flag = False
