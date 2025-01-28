@@ -1,6 +1,7 @@
 import RPi.GPIO as gpio
 from time import sleep
 
+# Device pinout - GPIO assignment 
 cs = 22
 clk = 23
 din = 24
