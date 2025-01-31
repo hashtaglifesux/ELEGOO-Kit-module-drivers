@@ -17,7 +17,7 @@ gpio.setup(din, gpio.OUT)
 
 # shift out 16 bits
 # address is a string with 4 binary digits eg. '1011'
-# data is a string with 8 binary digits
+# data is a string or array with 8 binary digits
 # can also be an int array, or a str array
 # if positive is 0, all data bits will be inverted
 def shout(addr: str, data, positive: int):
