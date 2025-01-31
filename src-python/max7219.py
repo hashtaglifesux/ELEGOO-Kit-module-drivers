@@ -5,7 +5,9 @@ from time import sleep
 cs = 22
 clk = 23
 din = 24
-delay = 0  # make shift-out slower
+
+# make shift-out slower
+delay = 0
 
 gpio.setmode(gpio.BCM)
 gpio.setup(cs, gpio.OUT)
