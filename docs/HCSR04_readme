@@ -1,0 +1,3 @@
+HCSR04 ultrasonic sensor
+measure() returns a distance in meters
+measure() takes one optional argument which is the speed of sound in m/s, its default value is 343
