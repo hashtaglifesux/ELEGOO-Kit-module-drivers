@@ -1,4 +1,5 @@
-#include "/Users/adaaspirations/Documents/Arduino/libraries/lightbyte.h"
+#include "ELEGOO-Kit-module-drivers/src-arduino/lightbyte.h"
+
 byte clk = 50;
 byte dt = 48;
 byte sw = 46;
