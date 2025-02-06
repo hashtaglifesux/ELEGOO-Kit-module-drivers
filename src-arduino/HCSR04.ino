@@ -2,11 +2,6 @@
 byte trig;
 byte echo;
 
-void setup() {
-  pinMode(trig, OUTPUT);
-  pinMode(echo, OUTPUT);
-}
-
 // returns the distance in meters
 // mach = speed of sound in m/s
 float measure(int mach = 343) {
@@ -20,6 +15,11 @@ float measure(int mach = 343) {
   }
   unsigned long EndTime = millis();
   return (EndTime-StartTime)*mach/2;
+}
+
+void setup() {
+  pinMode(trig, OUTPUT);
+  pinMode(echo, OUTPUT);
 }
 
 void loop() {}
