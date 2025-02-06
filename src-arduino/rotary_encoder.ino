@@ -1,10 +1,11 @@
-#include "ELEGOO-Kit-module-drivers/src-arduino/lightbyte.h"
+#include "ELEGOO-Kit-module-drivers/src-arduino/lightbyte.h" // used for testing
 
+// Device pinout - GPIO assignment 
 byte clk = 50;
 byte dt = 48;
 byte sw = 46;
 
-byte number = 0;
+byte number = 0; // used for testing
 
 void setup() {
   for (int j = 0; j != 8; j++) {
@@ -26,7 +27,9 @@ void loop() {
       }
     }
     if (flag) {
-      number += 1;
+      // encoder is rotating clockwise
+      number += 1; // used for testing
+      // dosomethinguseful();
       break;
     }
   }
@@ -39,7 +42,9 @@ void loop() {
       }
     }
     if (flag) {
-      number -= 1;
+      // encoder is rotating counterclockwise
+      number -= 1; // used for testing
+      // dosomethingelseuseful();
       break;
     }
   }
