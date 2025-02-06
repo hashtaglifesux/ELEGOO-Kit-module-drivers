@@ -1,4 +1,4 @@
-#include "ELEGOO-Kit-module-drivers/src-arduino/lightbyte.h" // used for testing
+#include "ELEGOO-Kit-module-drivers/tests/lightbyte.h" // used for testing
 
 // Device pinout - GPIO assignment 
 byte clk = 50;
