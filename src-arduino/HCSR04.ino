@@ -14,7 +14,7 @@ float measure(int mach = 343) {
   while (digitalRead(echo)) {
   }
   unsigned long EndTime = millis();
-  return (EndTime-StartTime)*mach/2;
+  return (EndTime-StartTime)*mach/2000;
 }
 
 void setup() {
