@@ -8,7 +8,7 @@ byte sw = 46;
 byte number = 0; // used for testing
 
 void setup() {
-  for (int j = 0; j != 8; j++) {
+  for (byte j = 0; j != 8; j++) {
     digitalWrite(pinout[j], OUTPUT);
   }
   pinMode(clk, INPUT);
@@ -17,7 +17,7 @@ void setup() {
 }
 
 void loop() {
-  int flag = false;
+  bool flag = false;
   while (not digitalRead(dt)) {
     flag = false;
     while (not digitalRead(clk)) {
