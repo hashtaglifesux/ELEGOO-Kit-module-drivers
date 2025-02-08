@@ -22,6 +22,3 @@ def measure(mach: int = 343):
          pass
     end = time()
     return (end-start)*mach/2
-
-
-# vt = d
