@@ -9,6 +9,14 @@ gpio.setmode(gpio.BCM)
 gpio.setup(trig, gpio.OUT)
 gpio.setup(echo, gpio.IN)
 
+
+# assign gpio pin numbers
+def assign_pins(trigger: int, echopin: int):
+    global trig, echo
+    trig = trigger
+    echo = echopin
+
+
 # returns the distance in meters
 # mach = speed of sound in m/s
 def measure(mach: int = 343):
