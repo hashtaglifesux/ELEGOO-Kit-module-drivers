@@ -2,7 +2,7 @@
 int pinout[8];
 
 // configure the pins used for each LED, MSB first
-void lightbyte_assign_pins(int pins[8]) {
+void lightbyte_assign_pins(byte pins[8]) {
   for (int i = 0; i!=8; i++) {
     pinout[i] = pins[i];
     pinMode(pinout[i], OUTPUT);
