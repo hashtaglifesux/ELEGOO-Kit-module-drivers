@@ -5,16 +5,15 @@ from time import time, sleep
 trig = 27
 echo = 22
 
-gpio.setmode(gpio.BCM)
-gpio.setup(trig, gpio.OUT)
-gpio.setup(echo, gpio.IN)
-
 
 # assign gpio pin numbers
 def assign_pins(trigger: int, echopin: int):
     global trig, echo
     trig = trigger
     echo = echopin
+    gpio.setmode(gpio.BCM)
+    gpio.setup(trig, gpio.OUT)
+    gpio.setup(echo, gpio.IN)
 
 
 # returns the distance in meters
