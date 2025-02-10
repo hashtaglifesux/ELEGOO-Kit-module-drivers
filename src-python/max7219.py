@@ -15,6 +15,14 @@ gpio.setup(clk, gpio.OUT)
 gpio.setup(din, gpio.OUT)
 
 
+# assign GPIO pin numbers
+def assign_pins(chipselect: int, clock: int, data: int):
+    global cs, clk, din
+    cs = chipselect
+    clk = clock
+    din = data
+
+
 # shift out 16 bits
 # address is a string with 4 binary digits eg. '1011'
 # data is a string or array with 8 binary digits
@@ -62,10 +70,14 @@ def image_out(img, mode):  # mode = 0 to invert the image
 # scanlimit is the highest data register scanned
 # shutdown_mode = True to enter the IC's shutdown mode
 # display_test = True to enter the IC's display test mode
-def init(intensity: int = 0, 
-        scanlimit: int = 7, 
-        shutdown_mode: bool = False, 
-        display_test: bool = False):
+# timedelay sets a delay time for shift-out, make it non-zero if you want to slow down 
+def config(intensity: int = 0, 
+           scanlimit: int = 7, 
+           shutdown_mode: bool = False, 
+           display_test: bool = False, 
+           timedelay: float = 0):
+    global delay
+    delay = timedelay
     image_out(['00000000' for ln in range(8)], 1)
     shout('1100', '00000000', 1)
     sleep(delay)
