@@ -2,8 +2,8 @@
 byte trig;
 byte echo;
 
-
-void ultrasonic_init(byte trig_pin, byte echo_pin) {
+// assign what gpio pins you will be using
+void ultrasonic_assign_pins(byte trig_pin, byte echo_pin) {
   trig = trig_pin;
   echo = echo_pin;
   pinMode(trig, OUTPUT);
