@@ -1,3 +1,4 @@
 HCSR04 ultrasonic sensor
+use the assign_pins function to assign which gpio pins will be used
 measure() returns a float distance in meters
 measure() takes one optional argument which is the speed of sound in m/s, its default value is 343
