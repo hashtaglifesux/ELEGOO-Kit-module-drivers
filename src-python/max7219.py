@@ -9,11 +9,6 @@ din = 24
 # make shift-out slower
 delay = 0
 
-gpio.setmode(gpio.BCM)
-gpio.setup(cs, gpio.OUT)
-gpio.setup(clk, gpio.OUT)
-gpio.setup(din, gpio.OUT)
-
 
 # assign GPIO pin numbers
 def assign_pins(chipselect: int, clock: int, data: int):
@@ -21,6 +16,10 @@ def assign_pins(chipselect: int, clock: int, data: int):
     cs = chipselect
     clk = clock
     din = data
+    gpio.setmode(gpio.BCM)
+    gpio.setup(cs, gpio.OUT)
+    gpio.setup(clk, gpio.OUT)
+    gpio.setup(din, gpio.OUT)
 
 
 # shift out 16 bits
