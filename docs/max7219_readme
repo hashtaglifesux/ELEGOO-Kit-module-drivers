@@ -1,5 +1,5 @@
 Connect the vcc pin to the 5V output pin, with a 100 ohm resistor to prevent overheating (at least thats what worked for me)
 Use the assign_pins() function to specifiy which GPIO ports will be assigned to the pinout. 
-use the config() function before doing anything with the screen
+use the config() function before doing anything with the screen (no arguments required)
 config() can also be used to configure the display later
 read the comments for parameter details 
