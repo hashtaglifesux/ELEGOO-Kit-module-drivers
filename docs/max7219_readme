@@ -1,4 +1,5 @@
-Connect the vcc pin to the raspberry pi's 5V output pin, with a 100 ohm resistor to prevent overheating (at least thats what worked for me)
-Use the variables din, clk, cs to specifiy which GPIO ports will be assigned to the pinout. 
-use the init() function before doing anything with the screen
-init() can also be used to configure the display later
+Connect the vcc pin to the 5V output pin, with a 100 ohm resistor to prevent overheating (at least thats what worked for me)
+Use the init() function to specifiy which GPIO ports will be assigned to the pinout. 
+use the config() function before doing anything with the screen
+config() can also be used to configure the display later
+read the comments for parameter details 
