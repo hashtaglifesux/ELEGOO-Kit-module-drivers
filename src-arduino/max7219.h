@@ -6,7 +6,7 @@ byte din;
 // make shift-out slower
 int wait = 0;
 
-//byte pinout[] = {31, 33, 35, 37, 39, 41, 43, 45};
+// Convert an int (<256) to binary
 bool eightbits[] = {0, 0, 0, 0, 0, 0, 0, 0};
 void int_to_bin(byte value) {
   for (int i = 7; i != -1; i--) {
@@ -19,8 +19,6 @@ void int_to_bin(byte value) {
         eightbits[7-i] = 0;
     }
   }
-  //for (byte i = 0; i != 8; i++) {
-    //digitalWrite(pinout[i], eightbits[i]);}
 }
 
 // assign gpio pin numbers
