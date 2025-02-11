@@ -1,4 +1,4 @@
-#include "/Users/adaaspirations/Documents/Arduino/max7219/max7219.h"
+#include "/src-arduino/max7219.h"
 
 bool arr[8][8] = {{1, 1, 1, 1, 1, 1, 1, 1},
                   {1, 0, 0, 0, 0, 0, 0, 1},
