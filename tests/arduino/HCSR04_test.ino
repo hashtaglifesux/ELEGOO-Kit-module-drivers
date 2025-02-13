@@ -8,7 +8,6 @@ void setup() {
 }
 
 void loop() {
-  intbyte(0);
   floatbyte(measure(), 5);
-  delay(400);
+  delay(1000);
 }
