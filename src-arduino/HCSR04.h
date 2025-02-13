@@ -13,14 +13,19 @@ void ultrasonic_assign_pins(byte trig_pin, byte echo_pin) {
 // returns the distance in meters
 // mach = speed of sound in m/s
 float measure(int mach = 343) {
-  digitalWrite(trig, HIGH);
-  delay(0.01); // minimum is 0.01
-  digitalWrite(trig, LOW);
-  while (not digitalRead(echo)) {
+  int sum = 0;
+  for (byte i = 0; i < 10; i++) {
+    digitalWrite(trig, HIGH);
+    delay(0.01); // minimum is 0.01
+    digitalWrite(trig, LOW);
+    while (not digitalRead(echo)) {
+    }
+    int StartTime = millis();
+    while (digitalRead(echo)) {
+    }
+    int EndTime = millis();
+    sum += (EndTime-StartTime);
+    delay(4.5);
   }
-  float StartTime = (float)millis();
-  while (digitalRead(echo)) {
-  }
-  float EndTime = (float)millis();
-  return (EndTime-StartTime)* (float)mach/2000.0;
+  return (float)sum*(float)mach/20000.0;
 }
