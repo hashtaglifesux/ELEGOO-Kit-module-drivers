@@ -1,5 +1,5 @@
-#include "/Users/adaaspirations/Documents/Arduino/libraries/max7219.h"
-#include "/Users/adaaspirations/Documents/Arduino/libraries/joystick.h"
+#include "max7219.h"
+#include "joystick.h"
 
 // every body segment of the snake is a single SnakeSegment
 struct SnakeSegment {
