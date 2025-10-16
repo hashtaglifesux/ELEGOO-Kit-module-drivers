@@ -19,6 +19,10 @@ bool loss[8][8] = {{0, 0, 0, 0, 0, 0, 0, 0},
                    {0, 0, 0, 0, 0, 0, 0, 0},
                    {0, 0, 0, 0, 0, 0, 0, 0},};
 
+// space for 64 snake segments because using malloc for each casues a crash after 10 apples
+SnakeSegment snake_reserve[64];
+void* rptr = &snake_reserve;
+
 // map of points where the snake changes heading
 char pivot_points[8][8];
 
@@ -46,7 +50,7 @@ void newSegment(SnakeSegment* head) {
   }
 
   // create the new tail
-  current->next_segment = malloc(sizeof(SnakeSegment));
+  current->next_segment = rptr;
   SnakeSegment* new_tail = current->next_segment;
   
   // assign the new tail's potition based on the heading of the previous segment
@@ -62,6 +66,8 @@ void newSegment(SnakeSegment* head) {
   new_tail->heading = current->heading;
   new_tail->next_segment = 0;
 
+  rptr += sizeof(SnakeSegment);
+  
   return;
 }
 
